@@ -1,0 +1,13 @@
+elasticsearch.hosts: [ "https://elasticsearch:9200" ]
+elasticsearch.username: elastic
+elasticsearch.password: asasas
+
+server.name: kibana
+server.host: "0"
+server.ssl.enabled: true
+server.ssl.certificate: /usr/share/kibana/config/certs/my-kibana/my-kibana.crt
+server.ssl.key: /usr/share/kibana/config/certs/my-kibana/my-kibana.key
+elasticsearch.ssl.certificateAuthorities: [ "/usr/share/kibana/config/certs/ca/ca.crt" ]
+elasticsearch.ssl.verificationMode: certificate
+xpack.security.authc.providers: [oidc, basic]
+xpack.security.authc.oidc.realm: oidc1
